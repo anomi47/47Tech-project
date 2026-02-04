@@ -1,0 +1,15 @@
+
+
+.hero{
+    background-image: url("../public/images/fashion-model.webm");
+}
+.hero::after{
+    background-image: url('../public/images/hero-gradient.webp');
+    position: absolute;
+    inset: 0;
+    content: ""; 
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
