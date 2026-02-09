@@ -4,8 +4,8 @@ import Paragraph from "../Paragraph";
 
 export const AboutUs = () => {
   return (
-    <section className="gradient-border w-[99vw] h-[99vh] bg-black pt-30 ">
-      <div className="mx-auto container text-center overflow-hidden">
+    <section className="gradient-border w-[99.8vw] h-[99.5vh] bg-black pt-30">
+      <div className="mx-auto container text-center overflow-hidden ">
         <Heading text="About Us" level={6} className="mb-5 color-white" />
         <Heading
           text="Igniting Ideas <br> Amplifying Brands"

@@ -10,6 +10,8 @@ import { AboutUs } from "./components/home/AboutUs";
 import WhatWeDo from "./components/home/ServicesSection";
 import OurProcess from "./components/home/OurProcess";
 import WhyChooseUs from "./components/home/WhyChooseUs";
+import ContactUs from "./components/home/ContactUs";
+import Testimonials from "./components/home/Testimonials";
 
 gsap.registerPlugin(ScrollToPlugin);
 
@@ -171,6 +173,22 @@ export default function Home() {
         className="panel"
       >
         <WhyChooseUs />
+      </section>
+
+      <section
+        ref={(el) => el && (panelsRef.current[5] = el)}
+        data-color="black"
+        className="panel"
+      >
+        <Testimonials/>
+      </section>
+
+      <section
+        ref={(el) => el && (panelsRef.current[6] = el)}
+        data-color="white"
+        className="panel"
+      >
+        <ContactUs />
       </section>
     </div>
   );

@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "./components/Header";
 import "./style.css";
 import { generalSansFonts } from "@/app/fonts";
+import Footer from "./components/Footer";
 
 export const metadata: Metadata = {
   title: "47 Tech - Turning your ideas into impact!",
@@ -27,6 +28,7 @@ export default function RootLayout({
       >
         <Header />
         {children}
+        {/* <Footer/> */}
       </body>
     </html>
   );

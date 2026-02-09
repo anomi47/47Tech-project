@@ -16,7 +16,6 @@ function hero() {
         >
           <source src="/images/fashion-model.webm" type="video/webm" />
         </video>
-        {/* <div className="absolute inset-0 bg-[url('/images/hero-gradient.webp')]"></div> */}
         <div className="grid grid-cols-2 gap-6 min-h-screen items-end z-10 relative mx-auto max-w-7xl pb-12">
           <div>
             <Heading text="Future Starts Here" level={1} />

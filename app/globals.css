@@ -23,6 +23,12 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-body), sans-serif;
+
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
 }
 
 html,
@@ -62,19 +68,19 @@ body.color-black {
 
 /* Gradient Headings */
 .gradient-blue-black {
-    background: linear-gradient(90deg, #9BC6F1 0%, #0A0A0E 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    color: transparent;
+  background: linear-gradient(90deg, #9bc6f1 0%, #0a0a0e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
 }
 
-.gradient-blue-white{
-    background: linear-gradient(90deg, #9BC6F1 0%, #ffffff 100%);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	background-clip: text;
-	color: transparent;
+.gradient-blue-white {
+  background: linear-gradient(90deg, #9bc6f1 0%, #ffffff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
 }
 
 /* Animated Border  */
@@ -82,7 +88,7 @@ body.color-black {
 .gradient-border {
   --borderWidth: 5px;
   position: relative;
-  border-radius: 0;
+  border-radius: 7px;
 }
 .gradient-border:after {
   content: "";
@@ -100,7 +106,7 @@ body.color-black {
     #a1b6ee,
     #b49ed6
   );
-  border-radius: 0;
+  border-radius: 5px;
   z-index: -1;
   animation: animatedgradient 6s ease alternate infinite;
   background-size: 300% 300%;
@@ -118,10 +124,65 @@ body.color-black {
   }
 }
 
+/* Contact Gradient Border */
+
+.contactGradientBorder {
+  --borderWidth: 5px;
+  position: relative;
+  border-radius: 24px;
+}
+.contactGradientBorder:after {
+  content: "";
+  position: absolute;
+  top: calc(0 * var(--borderWidth));
+  left: calc(-1.5 * var(--borderWidth));
+  height: calc(100% + var(--borderWidth) * 1.5);
+  width: calc(100% + var(--borderWidth) * 3);
+  background: linear-gradient(
+    60deg,
+    #f49891,
+    #c5106b,
+    #543871,
+    #6b7fd3,
+    #a1b6ee,
+    #b49ed6
+  );
+  border-radius: 24px;
+  z-index: -1;
+  animation: animatedgradient 6s ease alternate infinite;
+  background-size: 300% 300%;
+}
+
+@keyframes contactAnimatedGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 
 
-.swiper-pagination{
+
+
+.swiper-pagination {
   top: unset !important;
   bottom: 80px !important;
+}
 
+.hero {
+  background-image: url("../public/images/fashion-model.webm");
+}
+.hero::after {
+  background-image: url("../public/images/hero-gradient.webp");
+  position: absolute;
+  inset: 0;
+  content: "";
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
