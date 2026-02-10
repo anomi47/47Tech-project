@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Header from "./components/Header";
-import "./style.css";
 import { generalSansFonts } from "@/app/fonts";
 import Footer from "./components/Footer";
 

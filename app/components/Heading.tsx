@@ -14,10 +14,10 @@ const Heading: React.FC<HeadingProps> = ({ level = 2, text, className = "" }) =>
   const levelStyles: { [key: number]: string } = {
     1: `${monumentFonts.className} uppercase text-[120px] leading-[100px] font-semibold text-white`,
     2: `${monumentFonts.className} uppercase text-[80px] leading-[70px] font-semibold  text-center`,
-    3: "text-4xl font-semibold text-gray-800",
-    4: "text-3xl font-semibold text-gray-800",
+    3: `${monumentFonts.className} uppercase text-4xl font-semibold text-gray-800`,
+    4: `${monumentFonts.className} uppercase text-3xl font-normal text-gray-800`,
     5: `${monumentFonts.className} uppercase text-[24px] leading-[34px] font-regular text-center`,
-    6: "text-lg font-bold text-center uppercase tracking-[30]",
+    6: `uppercase text-base font-normal text-center uppercase tracking-[30]`,
   };
 
   return (

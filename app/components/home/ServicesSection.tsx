@@ -1,45 +1,15 @@
 "use client";
 
-import Image from "next/image";
-import { useState } from "react";
 import Heading from "../Heading";
 import Button from "../Button";
-
-const services = [
-  {
-    id: "01",
-    title: "DIGITAL MARKETING",
-    desc: "At 47 Tech, we blend creativity, technology, and strategy to craft digital solutions that deliver real business impact.",
-  },
-  {
-    id: "02",
-    title: "CONTENT CREATION",
-    desc: "At 47 Tech, we blend creativity, technology, and strategy to craft digital solutions that deliver real business impact.",
-  },
-  {
-    id: "03",
-    title: "VISUAL DESIGN",
-    desc: "At 47 Tech, we blend creativity, technology, and strategy to craft digital solutions that deliver real business impact.",
-  },
-  {
-    id: "04",
-    title: "UI/UX DESIGN",
-    desc: "At 47 Tech, we blend creativity, technology, and strategy to craft digital solutions that deliver real business impact.",
-  },
-  {
-    id: "05",
-    title: "E-COMMERCE SOLUTION",
-    desc: "At 47 Tech, we blend creativity, technology, and strategy to craft digital solutions that deliver real business impact.",
-  },
-];
+import ServicesAccordion from "./ServicesAccordion";
+import { accordionData } from "@/app/data";
 
 export default function ServicesSection() {
-  const [active, setActive] = useState(0);
-
   return (
-    <section className="min-h-screen flex items-center">
-      <div className="container px-6 grid items-center">
-       <div className="grid grid-cols-[3fr_1fr] gap-12">
+    <section className="min-h-screen flex items-center bg-[#F2F3F4] w-full">
+      <div className="container mx-auto px-6 grid items-center">
+        <div className="grid grid-cols-[3fr_1fr] gap-12 mb-20">
           <div>
             <Heading
               text="What We Do"
@@ -53,11 +23,15 @@ export default function ServicesSection() {
             />
           </div>
           <div className="flex items-end justify-end mb-3">
-            <Button href="/" variant="transparent-dark">view all services</Button>
+            <Button href="/" variant="transparent-dark">
+              view all services
+            </Button>
           </div>
         </div>
 
-        
+        <div className="mt-5">
+          <ServicesAccordion data={accordionData} />
+        </div>
       </div>
     </section>
   );

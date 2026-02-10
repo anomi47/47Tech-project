@@ -165,12 +165,15 @@ body.color-black {
   }
 }
 
-
-
+.services-section .contactGradientBorder:after {
+  z-index: 0;
+}
+.services-section .contactGradientBorder {
+  --borderWidth: 0px;
+}
 
 .swiper-pagination {
-  top: unset !important;
-  bottom: 80px !important;
+  bottom: 0px !important;
 }
 
 .hero {
@@ -185,4 +188,71 @@ body.color-black {
   height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.hero::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  content: "";
+  z-index: 1;
+}
+
+/* Testimonials */
+.custom-pagination {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: white;
+  width: 100%;
+}
+
+.custom-pagination .line {
+  flex: 1;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.3);
+  position: relative;
+}
+
+.custom-pagination .fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: white;
+}
+
+/* Our Process */
+
+.gradientBorderLtoR::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  border-radius: 24px;
+  background: linear-gradient(to right, rgba(0, 149, 255, 0.55), #0a0a0e);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.gradientBorderRtoL::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  border-radius: 24px;
+  background: linear-gradient(to left, rgba(0, 149, 255, 0.55), #0a0a0e);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
 }
