@@ -12,6 +12,7 @@ import OurProcess from "./components/home/OurProcess";
 import WhyChooseUs from "./components/home/WhyChooseUs";
 import ContactUs from "./components/home/ContactUs";
 import Testimonials from "./components/home/Testimonials";
+import Footer from "./components/Footer";
 
 gsap.registerPlugin(ScrollToPlugin);
 
@@ -180,7 +181,7 @@ export default function Home() {
         data-color="black"
         className="panel"
       >
-        <Testimonials/>
+        <Testimonials />
       </section>
 
       <section
@@ -190,6 +191,14 @@ export default function Home() {
       >
         <ContactUs />
       </section>
+
+      <footer
+        ref={(el) => el && (panelsRef.current[7] = el)}
+        data-color="white"
+        className="panel bg-[url('/images/footer-bg.webp')] bg-cover bg-center bg-no-repeat bg-black"
+      >
+        <Footer />
+      </footer>
     </div>
   );
 }

@@ -172,10 +172,6 @@ body.color-black {
   --borderWidth: 0px;
 }
 
-.swiper-pagination {
-  bottom: 0px !important;
-}
-
 .hero {
   background-image: url("../public/images/fashion-model.webm");
 }
