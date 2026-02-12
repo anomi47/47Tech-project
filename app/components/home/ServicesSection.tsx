@@ -7,7 +7,7 @@ import { accordionData } from "@/app/data";
 
 export default function ServicesSection() {
   return (
-    <section className="min-h-screen flex items-center bg-[#F2F3F4] w-full">
+    <section className="min-h-screen flex items-center w-full">
       <div className="container mx-auto px-6 grid items-center">
         <div className="grid grid-cols-[3fr_1fr] gap-12 mb-20">
           <div>

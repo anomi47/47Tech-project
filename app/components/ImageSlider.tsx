@@ -31,7 +31,7 @@ export default function ImageSlider() {
   return (
     <div className="-mx-3">
       <Swiper
-        modules={[Navigation, Pagination, Autoplay]}
+        modules={[ Autoplay]}
         slidesPerView={8}
         spaceBetween={12}
         //   navigation

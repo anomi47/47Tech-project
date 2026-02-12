@@ -7,7 +7,7 @@ import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 
 const ServicesAccordion = ({ data }: any) => {
-  const [active, setActive] = useState(0);
+  const [active, setActive] = useState<number | null>(null); // <-- null means all closed
 
   return (
     <div className="services-section">

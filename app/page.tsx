@@ -155,7 +155,7 @@ export default function Home() {
       <section
         ref={(el) => el && (panelsRef.current[2] = el)}
         data-color="white"
-        className="panel overflow-hidden"
+        className="panel overflow-hidden "
       >
         <WhatWeDo />
       </section>
